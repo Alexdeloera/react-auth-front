@@ -5,7 +5,7 @@ export const PrivateRoute:React.FC=()=>{
 const signed=useAppSelector((state)=>state.login);
 return(
   <>
-  {signed.id!==''? <Outlet/>:<Navigate to='login'/>}
+  {signed.token!==''? <Outlet/>:<Navigate to='login'/>}
   </>
 )
 }
